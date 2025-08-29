@@ -1,0 +1,75 @@
+{
+  "name": "Premium",
+  "version": "2.1",
+  "description": "Advanced healthcare with specialist access",
+  "pricing": {
+    "monthly": 149,
+    "annual": 1490
+  },
+  "features": {
+    "telehealth": {
+      "enabled": true,
+      "videoConsults": {
+        "limit": "unlimited",
+        "unit": "per_month"
+      },
+      "messagingSupport": {
+        "enabled": true,
+        "responseTime": "1h"
+      },
+      "groupSessions": {
+        "enabled": true,
+        "limit": "unlimited"
+      },
+      "specialistAccess": {
+        "enabled": true,
+        "waitTime": "same_day"
+      }
+    },
+    "appointments": {
+      "enabled": true,
+      "booking": {
+        "advanceNotice": "2h",
+        "cancellation": "2h"
+      },
+      "priorityScheduling": true,
+      "emergencyBooking": true
+    },
+    "healthRecords": {
+      "storage": "premium",
+      "export": true,
+      "sharing": true,
+      "analytics": true
+    },
+    "wellness": {
+      "tracking": true,
+      "insights": "advanced",
+      "personalizedPlans": true
+    },
+    "support": {
+      "level": "premium",
+      "channels": ["email", "chat", "phone"]
+    },
+    "careCoordination": {
+      "enabled": true,
+      "dedicatedCoordinator": true
+    }
+  },
+  "limits": {
+    "videoMinutes": "unlimited",
+    "messages": "unlimited",
+    "appointments": "unlimited",
+    "storageGB": 50,
+    "familyMembers": 6
+  },
+  "sla": {
+    "availability": "99.9%",
+    "responseTime": "1h",
+    "supportLevel": "premium"
+  },
+  "restrictions": {
+    "concurrentSessions": 5,
+    "familyMembers": 6,
+    "premiumFeatures": true
+  }
+}

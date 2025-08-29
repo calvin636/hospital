@@ -1,0 +1,40 @@
+{
+  "name": "hospital",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "codegen:openapi": "openapi-generator-cli generate -i openapi.yaml -g typescript-fetch -o src/lib/api/generated",
+    "seed:demo": "node scripts/seed-demo.mjs",
+    "stripe:listen": "stripe listen --forward-to localhost:3000/api/billing/webhook"
+  },
+  "dependencies": {
+    "next": "14.2.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "@supabase/supabase-js": "^2.39.0",
+    "stripe": "^14.0.0",
+    "agora-rtc-sdk-ng": "^4.20.0",
+    "agora-rtm-sdk": "^1.5.1",
+    "agora-rtc-react": "^2.2.0",
+    "micro": "^10.0.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.0",
+    "@openapitools/openapi-generator-cli": "^2.7.0"
+  }
+}

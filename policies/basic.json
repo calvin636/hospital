@@ -1,0 +1,53 @@
+{
+  "name": "Basic",
+  "version": "2.1",
+  "description": "Essential healthcare access",
+  "pricing": {
+    "monthly": 29,
+    "annual": 290
+  },
+  "features": {
+    "telehealth": {
+      "enabled": true,
+      "videoConsults": {
+        "limit": 2,
+        "unit": "per_month"
+      },
+      "messagingSupport": {
+        "enabled": true,
+        "responseTime": "24h"
+      }
+    },
+    "appointments": {
+      "enabled": true,
+      "booking": {
+        "advanceNotice": "48h",
+        "cancellation": "24h"
+      }
+    },
+    "healthRecords": {
+      "storage": "basic",
+      "export": false
+    },
+    "support": {
+      "level": "standard",
+      "channels": ["email"]
+    }
+  },
+  "limits": {
+    "videoMinutes": 120,
+    "messages": 50,
+    "appointments": 2,
+    "storageGB": 1
+  },
+  "sla": {
+    "availability": "99.5%",
+    "responseTime": "24h",
+    "supportLevel": "standard"
+  },
+  "restrictions": {
+    "concurrentSessions": 1,
+    "familyMembers": 1,
+    "premiumFeatures": false
+  }
+}

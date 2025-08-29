@@ -1,0 +1,64 @@
+{
+  "name": "Standard",
+  "version": "2.1",
+  "description": "Comprehensive healthcare management",
+  "pricing": {
+    "monthly": 79,
+    "annual": 790
+  },
+  "features": {
+    "telehealth": {
+      "enabled": true,
+      "videoConsults": {
+        "limit": 8,
+        "unit": "per_month"
+      },
+      "messagingSupport": {
+        "enabled": true,
+        "responseTime": "4h"
+      },
+      "groupSessions": {
+        "enabled": true,
+        "limit": 2
+      }
+    },
+    "appointments": {
+      "enabled": true,
+      "booking": {
+        "advanceNotice": "24h",
+        "cancellation": "12h"
+      },
+      "priorityScheduling": true
+    },
+    "healthRecords": {
+      "storage": "enhanced",
+      "export": true,
+      "sharing": true
+    },
+    "wellness": {
+      "tracking": true,
+      "insights": "basic"
+    },
+    "support": {
+      "level": "priority",
+      "channels": ["email", "chat"]
+    }
+  },
+  "limits": {
+    "videoMinutes": 480,
+    "messages": 200,
+    "appointments": 8,
+    "storageGB": 5,
+    "familyMembers": 3
+  },
+  "sla": {
+    "availability": "99.8%",
+    "responseTime": "4h",
+    "supportLevel": "priority"
+  },
+  "restrictions": {
+    "concurrentSessions": 2,
+    "familyMembers": 3,
+    "premiumFeatures": "limited"
+  }
+}

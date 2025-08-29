@@ -1,0 +1,132 @@
+openapi: 3.0.0
+info:
+  title: Hospital Concierge API
+  version: 1.0.0
+  description: Healthcare SaaS platform API
+servers:
+  - url: /api
+    description: Development server
+paths:
+  /me/context:
+    get:
+      summary: Get member context
+      responses:
+        '200':
+          description: Member context
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MemberContext'
+  /me/policy:
+    get:
+      summary: Get member policy
+      responses:
+        '200':
+          description: Member policy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Policy'
+  /me/meters:
+    get:
+      summary: Get usage meters
+      responses:
+        '200':
+          description: Usage meters
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Meter'
+  /me/video/start:
+    post:
+      summary: Start video session
+      responses:
+        '200':
+          description: Video session token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VideoSession'
+  /me/visit/book:
+    post:
+      summary: Book appointment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookingRequest'
+      responses:
+        '200':
+          description: Appointment booked
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+components:
+  schemas:
+    MemberContext:
+      type: object
+      properties:
+        id:
+          type: string
+        email:
+          type: string
+        plan:
+          type: string
+        status:
+          type: string
+    Policy:
+      type: object
+      properties:
+        name:
+          type: string
+        version:
+          type: string
+        features:
+          type: object
+        limits:
+          type: object
+        sla:
+          type: object
+    Meter:
+      type: object
+      properties:
+        name:
+          type: string
+        used:
+          type: number
+        limit:
+          type: number
+        unit:
+          type: string
+    VideoSession:
+      type: object
+      properties:
+        token:
+          type: string
+        channelName:
+          type: string
+        uid:
+          type: string
+    BookingRequest:
+      type: object
+      properties:
+        providerId:
+          type: string
+        datetime:
+          type: string
+        reason:
+          type: string
+    Appointment:
+      type: object
+      properties:
+        id:
+          type: string
+        providerId:
+          type: string
+        datetime:
+          type: string
+        status:
+          type: string

@@ -1,0 +1,89 @@
+{
+  "name": "Plus",
+  "version": "2.1",
+  "description": "Enterprise healthcare solution",
+  "pricing": {
+    "monthly": 299,
+    "annual": 2990
+  },
+  "features": {
+    "telehealth": {
+      "enabled": true,
+      "videoConsults": {
+        "limit": "unlimited",
+        "unit": "per_month"
+      },
+      "messagingSupport": {
+        "enabled": true,
+        "responseTime": "15m"
+      },
+      "groupSessions": {
+        "enabled": true,
+        "limit": "unlimited"
+      },
+      "specialistAccess": {
+        "enabled": true,
+        "waitTime": "immediate"
+      },
+      "emergencyConsults": {
+        "enabled": true,
+        "24x7": true
+      }
+    },
+    "appointments": {
+      "enabled": true,
+      "booking": {
+        "advanceNotice": "immediate",
+        "cancellation": "immediate"
+      },
+      "priorityScheduling": true,
+      "emergencyBooking": true,
+      "homeVisits": true
+    },
+    "healthRecords": {
+      "storage": "enterprise",
+      "export": true,
+      "sharing": true,
+      "analytics": true,
+      "aiInsights": true
+    },
+    "wellness": {
+      "tracking": true,
+      "insights": "ai_powered",
+      "personalizedPlans": true,
+      "nutritionPlanning": true
+    },
+    "support": {
+      "level": "enterprise",
+      "channels": ["email", "chat", "phone", "dedicated_line"]
+    },
+    "careCoordination": {
+      "enabled": true,
+      "dedicatedCoordinator": true,
+      "caseManagement": true
+    },
+    "enterprise": {
+      "apiAccess": true,
+      "customIntegrations": true,
+      "whiteLabel": true
+    }
+  },
+  "limits": {
+    "videoMinutes": "unlimited",
+    "messages": "unlimited",
+    "appointments": "unlimited",
+    "storageGB": "unlimited",
+    "familyMembers": "unlimited"
+  },
+  "sla": {
+    "availability": "99.99%",
+    "responseTime": "15m",
+    "supportLevel": "enterprise"
+  },
+  "restrictions": {
+    "concurrentSessions": "unlimited",
+    "familyMembers": "unlimited",
+    "premiumFeatures": true,
+    "enterpriseFeatures": true
+  }
+}
